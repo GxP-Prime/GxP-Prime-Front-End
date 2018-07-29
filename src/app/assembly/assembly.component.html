@@ -1,0 +1,58 @@
+<div class="assembly-container">
+  <div class="assembly-header">
+    <div class="color-blue sub-heading">Assembly</div>
+    <select class="text assembly-select color-white" (change)="onChangeDropdown($event)">
+      <option class="color-black" *ngFor="let v of dropdownContent" [value]="v.id">{{v.name}}</option>
+    </select>
+  </div>
+
+  <div>
+    <ul class="breadcrumb text">
+      <li *ngFor="let breads of breadcrumbArray">
+        <a>{{breads}}</a>
+      </li>
+      <li>
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="showComponents">
+    <div class="assembly-content-container">
+      <div class="assembly-content" *ngFor="let obj of componentData" (click)="cardClicked(obj)">
+        <div class="color-blue text-heading" style="padding-bottom: 16px; text-align: center; font-weight: bold;">{{obj.partName}}</div>
+        <div class="color-white text">
+          <span class="color-dark-blue label-text">Part Number: </span>{{obj.partNumber}}</div>
+        <div class="color-white text">
+          <span class="color-dark-blue label-text">Part UID: </span>{{obj.uid}}</div>
+        <div class="color-white text">
+          <span class="color-dark-blue label-text">Part Type: </span>{{obj.partType}}</div>
+        <div class="color-white text">
+          <span class="color-dark-blue label-text">Assembly Quality: </span>{{obj.assemblyQuality}}</div>
+        <img src="/assets/imgs/arrowForward.png" alt="Forward" class="arrow-forward" />
+        <div class="color-white text" [ngClass]="(obj.status=='Completed')?'complete-status':'progress-status'">{{obj.status}}</div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!showComponents">
+    <div class="assembly-content-container">
+      <div class="assembly-content" style="height: 60%;" *ngFor="let obj of componentData">
+        <div class="color-blue text-heading" style="padding-bottom: 16px; text-align: center; font-weight: bold;">{{obj.partName}}</div>
+        <div class="color-white text">
+          <span class="color-dark-blue label-text">Part Number: </span>{{obj.partNumber}}</div>
+        <div class="color-white text">
+          <span class="color-dark-blue label-text">Part UID: </span>{{obj.uid}}</div>
+        <div class="color-white text">
+          <span class="color-dark-blue label-text">Part Type: </span>{{obj.partType}}</div>
+        <div class="color-white text">
+          <span class="color-dark-blue label-text">Assembly Quality: </span>{{obj.assemblyQuality}}</div>
+        <div class="color-white text" style="margin-top: 32px;">
+          <span class="color-dark-blue label-text">Perform Action: </span>
+          <br> {{obj.action}}
+        </div>
+        <div>
+          <button class="btn-2 btn-dark text" (click)="completeAction(obj)">Complete Action</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

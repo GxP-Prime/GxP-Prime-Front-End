@@ -1,0 +1,48 @@
+@font-face {
+  font-family: Affogato;
+  src: url(./affogato-regular-webfont.woff);
+}
+
+@font-face {
+  font-family: Panton;
+  src: url(./Panton-LightCaps.otf)
+}
+
+.heading {
+  font-family: Panton;
+  font-size: 60px;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+}
+
+.sub-heading {
+  font-family: Panton;
+  font-size: 40px;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+}
+
+.label {
+  font-family : Affogato;
+  font-size : 36px;
+  letter-spacing : 0.77px;
+}
+
+.text-heading {
+  font-family : Affogato;
+  font-size : 28px;
+  letter-spacing : 0.77px;
+}
+
+.label-text {
+  font-family : Affogato;
+  font-size : 20px;
+  letter-spacing : 0.77px;
+  font-weight: bolder;
+}
+
+.text {
+  font-family : Affogato;
+  font-size : 20px;
+  letter-spacing : 0.77px;
+}

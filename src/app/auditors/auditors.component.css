@@ -1,0 +1,21 @@
+.auditors-container {
+  background: #293243;
+  height: 100%;
+}
+
+.auditors-table-container {
+  height: calc(100vh - 120px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.auditors-header {
+  padding: 32px;
+  background: #364359;
+}
+
+.auditor-data-container {
+  padding: 32px;
+  background: #364359;
+  margin: 32px;
+}

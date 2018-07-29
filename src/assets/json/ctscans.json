@@ -1,0 +1,33 @@
+[{
+  "partNumber": "CT1234",
+  "partName": "CT Scan 1",
+  "partUid": "UID1",
+  "id": 1,
+  "status": "Completed",
+  "partType": "MANUFACTURED_ITEM",
+  "assemblyQuality": "Pending"
+},{
+  "partNumber": "CT2344",
+  "partName": "CT Scan 2",
+  "partUid": "UID2",
+  "id": 2,
+  "status": "In Progress",
+  "partType": "PROCURED_ITEM",
+  "assemblyQuality": "Completed"
+},{
+  "partNumber": "CT3456",
+  "partName": "CT Scan 3",
+  "partUid": "UID3",
+  "id": 3,
+  "status": "In Progress",
+  "partType": "MANUFACTURED_ITEM",
+  "assemblyQuality": "Pending"
+},{
+  "partNumber": "CT6789",
+  "partName": "CT Scan 4",
+  "partUid": "UID4",
+  "id": 4,
+  "status": "Completed",
+  "partType": "PROCURED_ITEM",
+  "assemblyQuality": "Pending"
+}]

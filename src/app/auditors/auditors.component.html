@@ -1,0 +1,52 @@
+<div class="auditors-container">
+  <div class="auditors-header">
+    <div class="color-blue sub-heading">Auditors</div>
+  </div>
+
+  <div class="auditors-table-container">
+    <div *ngIf="qualityFlag" class="auditor-data-container">
+      <div class="label color-blue">Quality Transactions</div>
+      <div *ngFor="let data of auditorQualityData" class="color-white" style="padding: 32px; border-bottom: 2px solid #293243;">
+        <div class="color-white text">
+          <span class="color-dark-blue label-text">Part Number: </span>{{data.procuredAssembly}}</div>
+        <div class="color-white text">
+          <span class="color-dark-blue label-text">User: </span>{{data.procurementAdmin}}</div>
+        <div class="color-white text">
+          <span class="color-dark-blue label-text">Transaction Date: </span>{{data.timestamp}}</div>
+      </div>
+    </div>
+    <div *ngIf="assemblyFlag" class="auditor-data-container">
+      <div class="label color-blue">Assembly Transactions</div>
+      <div *ngFor="let data of auditorAssemblyData" class="color-white" style="padding: 32px; border-bottom: 2px solid #293243;">
+        <div class="color-white text">
+          <span class="color-dark-blue label-text">Part Number: </span>{{data.procuredAssembly}}</div>
+        <div class="color-white text">
+          <span class="color-dark-blue label-text">User: </span>{{data.procurementAdmin}}</div>
+        <div class="color-white text">
+          <span class="color-dark-blue label-text">Transaction Date: </span>{{data.timestamp}}</div>
+      </div>
+    </div>
+    <div *ngIf="procurementFlag" class="auditor-data-container">
+      <div class="label color-blue">Procurement Transactions</div>
+      <div *ngFor="let data of auditorProcurementData" class="color-white" style="padding: 32px; border-bottom: 2px solid #293243;">
+        <div class="color-white text">
+          <span class="color-dark-blue label-text">Part Number: </span>{{data.procuredAssembly}}</div>
+        <div class="color-white text">
+          <span class="color-dark-blue label-text">User: </span>{{data.procurementAdmin}}</div>
+        <div class="color-white text">
+          <span class="color-dark-blue label-text">Transaction Date: </span>{{data.timestamp}}</div>
+      </div>
+    </div>
+    <div *ngIf="manufacturingFlag" class="auditor-data-container">
+      <div class="label color-blue">Manufacturing Transactions</div>
+      <div *ngFor="let data of auditorManufacturingData" class="color-white" style="padding: 32px; border-bottom: 2px solid #293243;">
+        <div class="color-white text">
+          <span class="color-dark-blue label-text">Part Number: </span>{{data.procuredAssembly}}</div>
+        <div class="color-white text">
+          <span class="color-dark-blue label-text">User: </span>{{data.procurementAdmin}}</div>
+        <div class="color-white text">
+          <span class="color-dark-blue label-text">Transaction Date: </span>{{data.timestamp}}</div>
+      </div>
+    </div>
+  </div>
+</div>

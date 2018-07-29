@@ -1,0 +1,25 @@
+<div class="dashboard-container">
+  <div class="dashboard-header">
+    <div class="color-blue sub-heading">Dashboard</div>
+  </div>
+  <div class="dashboard-content-container">
+    <div class="dashboard-content" *ngFor="let obj of assemblyNewData" (click)="cardClicked(obj)">
+      <div class="color-blue text-heading" style="padding-bottom: 16px; text-align: center; font-weight: bold;">{{obj.partName}}</div>
+      <div class="color-white text"><span class="color-dark-blue label-text">Part Number: </span>{{obj.partNumber}}</div>
+      <div class="color-white text"><span class="color-dark-blue label-text">Part UID: </span>{{obj.uid}}</div>
+      <div class="color-white text"><span class="color-dark-blue label-text">Part Type: </span>{{obj.partType}}</div>
+      <div class="color-white text"><span class="color-dark-blue label-text">Assembly Quality: </span>{{obj.assemblyQuality}}</div>
+      <img src="/assets/imgs/arrowForward.png" alt="Forward" class="arrow-forward" />
+      <div class="color-white text" [ngClass]="(obj.status=='Completed')?'complete-status':'progress-status'">{{obj.status}}</div>
+    </div>
+  </div>
+  <img src="/assets/imgs/add.png" alt="Add" class="dashboard-add-icon" (click)="createAssembly()">
+
+  <div class="dashboard-create-box" *ngIf="showCreateFlag">
+    <div class="color-white label" style="text-align: center;
+    margin: 20px 0;">Create Assembly</div>
+    <input id="newUid" type="text" class="dashboard-create-input color-white" placeholder="Enter UID" /><br>
+    <input id="newPartNum" type="text" class="dashboard-create-input color-white" placeholder="Enter Part Number" /><br>
+    <button class="btn-1 btn-dark" (click)="createButton()">Create</button>
+  </div>
+</div>

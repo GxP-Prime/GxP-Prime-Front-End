@@ -1,0 +1,76 @@
+.dashboard-container {
+  background: #293243;
+  height: 100%;
+}
+
+.dashboard-header {
+  padding: 32px;
+  background: #364359;
+}
+
+.dashboard-content-container {
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.dashboard-content {
+  padding: 16px;
+  background: #364359;
+  margin: 32px;
+  width: 420px;
+  cursor: pointer;
+}
+
+.complete-status {
+  background: #4caf50;
+  width: fit-content;
+  padding: 8px 16px;
+  margin-top: 16px;
+  border-radius: 24px;
+  float: right;
+}
+
+.progress-status {
+  background: #ff9800;
+  width: fit-content;
+  padding: 8px 16px;
+  margin-top: 16px;
+  border-radius: 24px;
+  float: right;
+}
+
+.arrow-forward {
+  height: 32px;
+  width: 32px;
+  float: right;
+  margin: 20px 0 0 20px;
+}
+
+.dashboard-create-box {
+  background: #364359;
+  padding: 32px;
+  width: fit-content;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+}
+
+.dashboard-add-icon {
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+}
+
+.dashboard-create-input {
+  background: transparent;
+  padding: 16px;
+  margin: 16px 0;
+  border: 2px solid rgb(124, 124, 130);
+  outline: none;
+  width: 320px;
+}
